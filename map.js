@@ -13,15 +13,17 @@ function success(position) {
 
     const map = L.map('mapView').setView([latitude, longitude], 13);
 
-    // const myMap = L.map('map', {
-    //     center: [48.868672, 2.342130],
-    //     zoom: 12,
-    // });
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
+
+
+    let marker = L.marker([latitude, longitude]).addTo(map)
+
+    marker.bindPopup("<b>You are here</b>").openPopup();
+    //marker.addTo(mapView).bindPopup('<p1><b>The Hoxton, Paris</b></p1>').openPopup()
 }
 
 
