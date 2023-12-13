@@ -17,14 +17,17 @@
         <h1>Tailored Travel</h1>
 
         <div id="menu">
-            <label>Select type of business</label>
-            <select name="business" id="business">
-                <option value="">Select one..</option>
-                <option value="coffe">Coffee</option>
-                <option value="restaurant">Restaurant</option>
-                <option value="hotel">Hotel</option>
-                <option value="market">Market</option>
-            </select>
+            <form>
+                <label>Select type of business</label>
+                <select name="business" id="business">
+                    <option value="">Select one..</option>
+                    <option value="coffe">Coffee</option>
+                    <option value="restaurant">Restaurant</option>
+                    <option value="hotel">Hotel</option>
+                    <option value="market">Market</option>
+                </select>
+                <input type="button" onclick="getSelected()" value="Search">
+            </form>
         </div>
 
         <div id="mapView"></div>

@@ -23,8 +23,13 @@ function success(position) {
     let marker = L.marker([latitude, longitude]).addTo(map)
 
     marker.bindPopup("<b>You are here</b>").openPopup();
-    //marker.addTo(mapView).bindPopup('<p1><b>The Hoxton, Paris</b></p1>').openPopup()
+
 }
 
+
+function getSelected() {
+    const item = document.getElementById("business").value;
+    //console.log(item);
+}
 
 //main();
